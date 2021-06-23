@@ -1,0 +1,16 @@
+{
+  "full_name": "Carlos Lugones",
+  "email": "contact@lugodev.com",
+  "github_username": "lugodev",
+  "project_name": "PTB Django Cookiecutter",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "A simple cookiecutter to create Python Telegram bots, wrapped with Django.",
+  "pypi_username": "{{ cookiecutter.github_username }}",
+  "version": "0.1.0",
+  "use_pytest": "n",
+  "use_pypi_deployment_with_travis": "n",
+  "add_pyup_badge": "n",
+  "command_line_interface": ["Click", "Argparse", "No command-line interface"],
+  "create_author_file": "y",
+  "open_source_license": ["MIT license"]
+}
