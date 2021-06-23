@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  {{cookiecutter.project_slug}}:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    volumes:
+      - "./{{cookiecutter.project_slug}}/codebase:/codebase"
+      - "./{{cookiecutter.project_slug}}/storage:/storage"
+    restart: always
