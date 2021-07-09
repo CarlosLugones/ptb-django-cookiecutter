@@ -16,10 +16,10 @@ RUN apt-get update
 RUN apt-get install -y python3 python3-pip python-dev build-essential python3-venv
 
 RUN mkdir -p /codebase /storage
-ADD src /codebase
+ADD . /codebase
 WORKDIR /codebase
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /codebase/src/requirements.txt
 RUN chmod +x /codebase/src/bot/prod.py
 
 CMD python3 /codebase/src/bot/prod.py migrate --no-input; \
