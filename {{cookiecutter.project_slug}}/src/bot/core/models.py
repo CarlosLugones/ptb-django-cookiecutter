@@ -51,3 +51,6 @@ class BotUser(CreatedUpdatedModel):
         if self.username is not None:
             name += f' (@{self.username})'
         return name
+
+    def report_last_action(self):
+        self.last_action_datetime = now()
