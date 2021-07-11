@@ -4,6 +4,12 @@
 
 > A simple cookiecutter to create Python Telegram bots, wrapped with Django.
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
+[![Latest release](https://img.shields.io/github/release/lugodev/ptb-django-cookiecutter.svg)](https://github.com/lugodev/ptb-django-cookiecutter/releases)
+[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/LugodevChat)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 Based on:
 * [python-telegram-bot (PTB)](https://python-telegram-bot.org)
 * [Django](https://djangoproject.com)
@@ -94,12 +100,24 @@ Then, deploy, using `docker-compose`:
     cd codebase
     docker-compose up --build -d
 
-## Contribute
-
-* Fork this repo.
-* Commit your contributions to a new branch.
-* Submit a pull request.
-
 ## Bots created with this cookiecutter
 
 None yet. Want to be the first? Submit your bot if it's open source.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table></table>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+<p align="center">
+    <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
+</p>
