@@ -8,7 +8,11 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Based on:
+[![Latest release](https://img.shields.io/github/release/lugodev/ptb-django-cookiecutter.svg)](https://github.com/lugodev/ptb-django-cookiecutter/releases)
+[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/LugodevChat)
+
+## Based on this cool projects
+
 * [python-telegram-bot (PTB)](https://python-telegram-bot.org)
 * [Django](https://djangoproject.com)
 * [Cookiecutter](https://cookiecutter.readthedocs.io)
