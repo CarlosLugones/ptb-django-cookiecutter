@@ -58,7 +58,6 @@ Once you have generated your new bot, you will get this folders structure:
         * `models.py`: Your bot models, defined as Django model classes.
         * `renderers.py`: Methods to render your messages.
 
-
 ## Start your bot on dev environment
 
 ✨ **Tip (optional):** Create these aliases on on your `.bashrc` or `.zshrc`, like this
@@ -129,3 +128,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 <p align="center">
     <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
 </p>
+
+## Related videos
+
+[![Alt text](https://img.youtube.com/vi/3mlE6QGyx78/0.jpg)](https://www.youtube.com/watch?v=3mlE6QGyx78)
