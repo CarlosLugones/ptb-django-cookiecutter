@@ -42,7 +42,7 @@ This will clone the cookiecutter and launch a wizard to help you customize your 
 
 ![Installation](docs/terminal0.png)
 
-## Bot structure
+## Bot engine folder structure 🤖
 
 Once you have generated your new bot, you will get this folders structure:
 
@@ -58,7 +58,15 @@ Once you have generated your new bot, you will get this folders structure:
         * `models.py`: Your bot models, defined as Django model classes.
         * `renderers.py`: Methods to render your messages.
 
-## Start your bot on dev environment
+## Install your bot dependencies 📦
+
+You have two primary options to install de bot Python dependencies: pip or Poetry. You can also use pipenv, virtualenvwrapper or another package managers. We recommend Poetry.
+
+1. Install dependencies using [Poetry](https://python-poetry.org):
+
+    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    cd src/bot
+    poetry install
 
 ✨ **Tip (optional):** Create these aliases on on your `.bashrc` or `.zshrc`, like this
 
@@ -68,18 +76,19 @@ Once you have generated your new bot, you will get this folders structure:
     alias djm="django makemigrations && django migrate"
     alias djmr="djm && djr"
 
-Install the dependencies using [Poetry](https://python-poetry.org):
+2. Or install your dependencies using pip.
 
-    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-    cd src/bot
-    poetry install
+    pip3 install -r requirements.txt
 
-Place your env vars to the `.env` file (never push the file to the repo):
+## Initialize your bot environment variables
+
+Place your env vars to the `.env` file (never push this file to the repo):
 
     SECRET_KEY=your django random secret key
     TELEGRAM_TOKEN=your bot token
+## Start the bot
 
-Start the bot (using the alias):
+Start the bot (using the previously suggested alias, optional):
 
     django runbot
 
@@ -87,7 +96,11 @@ Or using Poetry:
 
     python3 -m poetry run ./dev.py runbot
 
-## Deploy your bot
+Or using Python:
+
+    python3 dev.py runbot
+
+## Deploy your bot 🚀
 
 Clone your repo to the server, and create this folder structure:
 
