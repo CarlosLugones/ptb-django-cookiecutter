@@ -1,24 +1,23 @@
-# PTB Django cookiecutter
+# PTB Django Cookiecutter
 
-![PTB Django Cookiecutter](docs/_static/cover.jpg)
+![PTB Django Cookiecutter](_static/cover.jpg)
 
 > A simple cookiecutter to create Python Telegram bots, wrapped with Django.
-
-[![Latest release](https://img.shields.io/github/release/lugodev/ptb-django-cookiecutter.svg)](https://github.com/lugodev/ptb-django-cookiecutter/releases)
-[![Documentation Status](https://readthedocs.org/projects/ptb-django-cookiecutter/badge/?version=latest)](https://ptb-django-cookiecutter.readthedocs.io/en/latest/?badge=latest)
-[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/LugodevChat)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## Based on this cool projects
+[![Latest release](https://img.shields.io/github/release/lugodev/ptb-django-cookiecutter.svg)](https://github.com/lugodev/ptb-django-cookiecutter/releases)
+[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/LugodevChat)
+
+# Based on this cool projects
 
 * [python-telegram-bot (PTB)](https://python-telegram-bot.org)
 * [Django](https://djangoproject.com)
 * [Cookiecutter](https://cookiecutter.readthedocs.io)
 
-## What's inside
+# What's inside
 
 * Django app with `dev` and `prod` environments.
 * Model to store bot users data.
@@ -29,7 +28,7 @@
 * Small engine to wrap the bot callbacks.
 * Ready for deployment using Docker via `docker-compose`.
 
-## Quickstart
+# Quickstart
 
 Install the latest Cookiecutter if you haven't installed it yet:
 
@@ -41,9 +40,9 @@ Create your bot using this cookiecutter:
 
 This will clone the cookiecutter and launch a wizard to help you customize your new bot.
 
-![Installation](docs/_static/terminal0.png)
+![Installation](_static/terminal0.png)
 
-## Bot engine folder structure 🤖
+# Bot engine folder structure
 
 Once you have generated your new bot, you will get this folders structure:
 
@@ -59,7 +58,7 @@ Once you have generated your new bot, you will get this folders structure:
         * `models.py`: Your bot models, defined as Django model classes.
         * `renderers.py`: Methods to render your messages.
 
-## Install your bot dependencies 📦
+# Install your bot dependencies
 
 You have two primary options to install de bot Python dependencies: pip or Poetry. You can also use pipenv, virtualenvwrapper or another package managers. We recommend Poetry.
 
@@ -87,14 +86,14 @@ You have two primary options to install de bot Python dependencies: pip or Poetr
     pip3 install -r requirements.txt
     ```
 
-## Initialize your bot environment variables
+# Initialize your bot environment variables
 
 Place your env vars to the `.env` file (never push this file to the repo):
 
     SECRET_KEY=your django random secret key
     TELEGRAM_TOKEN=your bot token
 
-## Start the bot
+# Start the bot
 
 Start the bot (using the previously suggested alias, optional):
 
@@ -108,7 +107,7 @@ Or using Python:
 
     python3 dev.py runbot
 
-## Deploy your bot 🚀
+# Deploy your bot
 
 Clone your repo to the server, and create this folder structure:
 
@@ -122,34 +121,10 @@ Then, deploy, using `docker-compose`:
     cd codebase
     docker-compose up --build -d
 
-## Bots created with this cookiecutter
+# Bots created with this cookiecutter
 
 None yet. Want to be the first? Submit your bot if it's open source.
 
-## Related videos
+# Related videos
 
 [![Crea tu bot de Telegram usando esta plantilla - PTB  + Django + Cookiecutter](https://img.youtube.com/vi/3mlE6QGyx78/0.jpg)](https://www.youtube.com/watch?v=3mlE6QGyx78)
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="http://lugodev.com"><img src="https://avatars.githubusercontent.com/u/18733370?v=4" width="100px;" alt=""/><br /><sub><b>Carlos Lugones</b></sub></a></td>
-    <td align="center"><a href="https://blog.ragnarok22.dev"><img src="https://avatars.githubusercontent.com/u/8838803?v=4" width="100px;" alt=""/><br /><sub><b>Reinier Hernández</b></sub></a></td>
-  </tr>
-</table>
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-<p align="center">
-    <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
-</p>
