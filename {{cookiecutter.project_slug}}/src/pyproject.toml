@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "{{cookiecutter.project_slug}}"
 version = "0.1.0"
-description = "Telegram bot boilerplate with small engine"
-authors = ["Carlos Lugones <contact@lugodev.com>"]
-license = "MIT"
+description = "{{cookiecutter.project_short_description}}"
+authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
+license = "{{cookiecutter.open_source_license}}"
 
 [tool.poetry.dependencies]
 python = "^3.8"
