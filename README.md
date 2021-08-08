@@ -105,6 +105,10 @@ Then, deploy, using `docker-compose`:
 
 None yet. Want to be the first? Submit your bot if it's open source.
 
+## Related videos
+
+[![Crea tu bot de Telegram usando esta plantilla - PTB  + Django + Cookiecutter](https://img.youtube.com/vi/3mlE6QGyx78/0.jpg)](https://www.youtube.com/watch?v=3mlE6QGyx78)
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -118,7 +122,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://blog.ragnarok22.dev"><img src="https://avatars.githubusercontent.com/u/8838803?v=4" width="100px;" alt=""/><br /><sub><b>Reinier Hernández</b></sub></a></td>
   </tr>
 </table>
-
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
@@ -129,7 +132,3 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 <p align="center">
     <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
 </p>
-
-## Related videos
-
-[![Alt text](https://img.youtube.com/vi/3mlE6QGyx78/0.jpg)](https://www.youtube.com/watch?v=3mlE6QGyx78)
