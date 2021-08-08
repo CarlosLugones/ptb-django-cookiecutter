@@ -17,6 +17,17 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "ragnarok22",
+      "name": "Reinier Hernández",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8838803?v=4",
+      "profile": "https://blog.ragnarok22.dev",
+      "contributions": [
+        "bug",
+        "review",
+        "test"
+      ]
     }
   ],
   "projectName": "ptb-django-cookiecutter",
