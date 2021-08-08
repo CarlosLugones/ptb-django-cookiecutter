@@ -11,5 +11,6 @@
   "use_pypi_deployment_with_travis": "n",
   "add_pyup_badge": "n",
   "create_author_file": "y",
-  "open_source_license": ["Not open source", "MIT license"]
+  "open_source_license": ["Not open source", "MIT license"],
+  "command_line_interface": []
 }
