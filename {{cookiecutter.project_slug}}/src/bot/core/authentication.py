@@ -12,29 +12,35 @@ def authenticate(chat):
     This method should be called whenever you want to authenticate an user of your bot.
     """
 
-    user, _ = models.BotUser.objects.get_or_create(chat_id=chat['id'])
+    if chat.username == 'GroupAnonymousBot':
+        
+        return None, True
 
-    user.chat_id = chat['id']
+    else:
 
-    # get username
-    try:
-        user.username = chat.username
-    except Exception as e:
-        user.username = None
+        user, _ = models.BotUser.objects.get_or_create(chat_id=chat['id'])
 
-    # get first name
-    try:
-        user.first_name = chat.first_name
-    except Exception as e:
-        user.first_name = None
+        user.chat_id = chat['id']
 
-    # get last name
-    try:
-        user.last_name = chat.last_name
-    except Exception as e:
-        user.last_name = None
+        # get username
+        try:
+            user.username = chat.username
+        except Exception as e:
+            user.username = None
 
-    user.report_last_action()
-    user.save()
+        # get first name
+        try:
+            user.first_name = chat.first_name
+        except Exception as e:
+            user.first_name = None
 
-    return user
+        # get last name
+        try:
+            user.last_name = chat.last_name
+        except Exception as e:
+            user.last_name = None
+
+        user.report_last_action()
+        user.save()
+
+        return user
