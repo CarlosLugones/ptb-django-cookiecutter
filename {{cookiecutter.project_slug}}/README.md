@@ -49,22 +49,27 @@ You have two primary options to install de bot Python dependencies: pip or Poetr
 
 1. Install dependencies using [Poetry](https://python-poetry.org):
 
+    ```
     curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
     cd src/bot
     poetry install
+    ```
 
 ✨ **Tip (optional):** Create these aliases on on your `.bashrc` or `.zshrc`, like this
 
+    ```
     alias poetry="python3 -m poetry"
     alias django="poetry run ./dev.py"
     alias djr="django runserver"
     alias djm="django makemigrations && django migrate"
     alias djmr="djm && djr"
+    ```
 
-2. Or install your dependencies using pip.
+1. Or install your dependencies using pip.
 
+    ```
     pip3 install -r requirements.txt
-
+    ```
 ## Initialize your bot environment variables
 
 Place your env vars to the `.env` file (never push this file to the repo):
