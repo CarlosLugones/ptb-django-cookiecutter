@@ -4,7 +4,7 @@ from distutils.core import setup
 setup(
     name='ptb-django-cookiecutter',
     packages=[],
-    version='0.1.0',
+    version='0.1.1',
     description='A simple cookiecutter to create Python Telegram bots, wrapped with Django.',
     author='Carlos Lugones',
     license='MIT',
