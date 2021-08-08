@@ -1,37 +1,15 @@
-.. cookiecutter-pypackage documentation master file, created by
-   sphinx-quickstart on Sun Dec 13 09:13:01 2015.
+.. ptb-django-cookiecutter documentation master file, created by
+   sphinx-quickstart on Sun Aug  8 17:19:54 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to cookiecutter-pypackage's documentation!
-==================================================
-
-Getting Started
----------------
+PTB Django cookiecutter
+=======================
 
 .. toctree::
+   README.md
    :maxdepth: 2
-
-   readme
-   tutorial
-   pypi_release_checklist
-
-Basics
-------
-
-.. toctree::
-   :maxdepth: 2
-
-   prompts
-
-Advanced Features
------------------
-
-.. toctree::
-   :maxdepth: 2
-
-   travis_pypi_setup
-   console_script_setup
+   :caption: Contents:
 
 
 Indices and tables
