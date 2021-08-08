@@ -2,16 +2,16 @@
 
 from distutils.core import setup
 setup(
-    name='cookiecutter-pypackage',
+    name='ptb-django-cookiecutter',
     packages=[],
     version='0.1.0',
-    description='Cookiecutter template for a Python package',
-    author='Audrey Roy Greenfeld',
-    license='BSD',
-    author_email='aroy@alum.mit.edu',
-    url='https://github.com/audreyr/cookiecutter-pypackage',
+    description='A simple cookiecutter to create Python Telegram bots, wrapped with Django.',
+    author='Carlos Lugones',
+    license='MIT',
+    author_email='contact@lugodev.com',
+    url='https://github.com/lugodev/ptb-django-cookiecutter',
     keywords=['cookiecutter', 'template', 'package', ],
-    python_requires='>=3.6',
+    python_requires='>=3.8',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
