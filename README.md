@@ -96,7 +96,7 @@ Place your env vars to the `.env` file (never push this file to the repo):
 
 ## Migrate database
 
-This cookiecutter use Django ORM. First you must to make the model's migrations and then migrate them to database:
+This cookiecutter uses the Django ORM. First you must to make the model's migrations and then migrate them to database:
 
     python3 src/bot/dev.py makemigrations
     python3 src/bot/dev.py migrate
