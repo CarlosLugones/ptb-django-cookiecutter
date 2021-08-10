@@ -94,6 +94,13 @@ Place your env vars to the `.env` file (never push this file to the repo):
     SECRET_KEY=your django random secret key
     TELEGRAM_TOKEN=your bot token
 
+## Migrate database
+
+This cookiecutter use Django ORM. First you must to make the model's migrations and then migrate them to database:
+
+    python3 src/bot/dev.py makemigrations
+    python3 src/bot/dev.py migrate
+
 ## Start the bot
 
 Start the bot (using the previously suggested alias, optional):
@@ -102,11 +109,11 @@ Start the bot (using the previously suggested alias, optional):
 
 Or using Poetry:
 
-    python3 -m poetry run ./dev.py runbot
+    python3 -m poetry run src/bot/dev.py runbot
 
 Or using Python:
 
-    python3 dev.py runbot
+    python3 src/bot/dev.py runbot
 
 ## Deploy your bot 🚀
 
