@@ -43,4 +43,4 @@ def authenticate(chat):
         user.report_last_action()
         user.save()
 
-        return user
+        return user, False
