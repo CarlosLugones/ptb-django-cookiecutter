@@ -7,7 +7,7 @@ license = "{{cookiecutter.open_source_license}}"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-python-telegram-bot = "^13.5"
+python-telegram-bot = "^13.7"
 python-dotenv = "^0.17.1"
 Django = "^3.2.2"
 
