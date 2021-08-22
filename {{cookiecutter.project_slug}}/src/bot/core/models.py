@@ -4,23 +4,18 @@ from django.utils.timezone import now
 # Create your models here.
 
 
-class CreatedUpdatedModel(models.Model):
+class TimeStampedModel(models.Model):
     """
     A model to reuse the `created_at` and `updated_at` fields
     """
-    created_at = models.DateTimeField(default=now, null=True, blank=True)
-    updated_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True
 
-    def save(self, *args, **kwargs):
-        if not self._state.adding:
-            self.updated_at = now()
-        super().save(*args, **kwargs)
 
-
-class BotUser(CreatedUpdatedModel):
+class BotUser(TimeStampedModel):
     """
     The bot user
     """

@@ -40,6 +40,12 @@ def authenticate(chat):
     except Exception as e:
         user.last_name = None
 
+    # get language preferences
+    try:
+        user.language = chat.language_code.upper()
+    except Exception as e:
+        user.language = None
+
     user.report_last_action()
     user.save()
 
