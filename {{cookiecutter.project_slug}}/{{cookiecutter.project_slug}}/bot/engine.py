@@ -12,7 +12,6 @@ from telegram.ext import (
     MessageHandler,
     ConversationHandler,
     Filters,
-    PreCheckoutQueryHandler,
 )
 from django.conf import settings
 
