@@ -1,14 +1,56 @@
-version: "3"
+version: "3.7"
 
 services:
-  {{cookiecutter.project_slug}}:
-    build:
-      context: "."
-      dockerfile: Dockerfile
-    environment:
-      - SECRET_KEY=${SECRET_KEY}
-      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
-    volumes:
-      - "./{{cookiecutter.project_slug}}/codebase:/codebase"
-      - "./{{cookiecutter.project_slug}}/storage:/storage"
-    restart: always
+    web:
+        container_name: {{cookiecutter.project_slug}}_web
+        image: {{cookiecutter.project_slug}}:1.0.0
+        build:
+            context: "."
+            dockerfile: Dockerfile
+        environment:
+            - SECRET_KEY=${SECRET_KEY}
+            - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+            - DB_NAME=${DB_NAME}
+            - DB_HOST=${DB_HOST}
+            - DB_PORT=${DB_PORT}
+            - DB_USER=${DB_USER}
+            - DB_PASSWORD=${DB_PASSWORD}
+            - DJANGO_SETTINGS_MODULE=config.settings.prod
+        command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 --log-file logs/gunicorn-error.log
+        volumes:
+            - .:/app
+            - ./static:/app/static/
+        depends_on:
+            - db
+        ports:
+            - "8000:8000"
+        restart: always
+    bot:
+        container_name: {{cookiecutter.project_slug}}_bot
+        image: {{cookiecutter.project_slug}}:1.0.0
+        environment:
+            - SECRET_KEY=${SECRET_KEY}
+            - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+            - DB_NAME=${DB_NAME}
+            - DB_HOST=${DB_HOST}
+            - DB_PORT=${DB_PORT}
+            - DB_USER=${DB_USER}
+            - DB_PASSWORD=${DB_PASSWORD}
+            - DJANGO_SETTINGS_MODULE=config.settings.prod
+        command: python3 manage.py runbot
+        depends_on:
+            - web
+        restart: always
+    db:
+        image: postgres:13
+        container_name: cubablog_db
+        environment:
+            - POSTGRES_DB=${DB_NAME}
+            - POSTGRES_USER=${DB_USER}
+            - POSTGRES_PASSWORD=${DB_PASSWORD}
+        volumes:
+            - ./data:/var/lib/postgresql/data
+        restart: always
+volumes:
+    static_volume:
+    postgres_data:
