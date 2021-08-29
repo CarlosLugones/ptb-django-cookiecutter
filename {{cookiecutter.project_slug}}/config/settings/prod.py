@@ -13,6 +13,9 @@ DATABASES = {
     }
 }
 
+# add middleware to debug in production only for superusers
+MIDDLEWARE.append('{{cookiecutter.project_slug}}.core.middleware.UserBasedExceptionMiddleware')
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
