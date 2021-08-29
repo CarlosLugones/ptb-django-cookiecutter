@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from core.engine import Bot
+from {{cookiecutter.project_slug}}.bot.engine import Bot
 
 
 class Command(BaseCommand):
