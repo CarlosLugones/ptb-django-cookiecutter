@@ -5,7 +5,7 @@ setup(
     name='ptb-django-cookiecutter',
     packages=[],
     version='0.1.1',
-    description='A simple cookiecutter to create Python Telegram bots, wrapped with Django.',
+    description='A simple cookiecutter to create Python Telegram bot, wrapped with Django.',
     author='Carlos Lugones',
     license='MIT',
     author_email='contact@lugodev.com',

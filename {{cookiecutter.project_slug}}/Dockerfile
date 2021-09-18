@@ -1,4 +1,6 @@
-FROM python:3.8-slim AS {{cookiecutter.project_slug}}
+FROM python:3.9-alpine AS {{cookiecutter.project_slug}}
+
+WORKDIR /app
 
 ENV PYTHONFAULTHANDLER=1
 ENV PYTHONUNBUFFERED=1
@@ -12,15 +14,18 @@ ENV PIP_DEFAULT_TIMEOUT=100
 ENV SECRET_KEY ${SECRET_KEY}
 ENV TELEGRAM_TOKEN ${TELEGRAM_TOKEN}
 
-RUN apt-get update
-RUN apt-get install -y python3 python3-pip python-dev build-essential python3-venv
+# install psycopg2 dependencies
+RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
 
-RUN mkdir -p /codebase /storage
-ADD . /codebase
-WORKDIR /codebase
+# install dependencies
+RUN mkdir requirements
+ADD ./requirements/ /app/requirements
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements/prod.txt
 
-RUN pip3 install -r /codebase/src/requirements.txt
-RUN chmod +x /codebase/src/bot/prod.py
+# copy project
+COPY . .
 
-CMD python3 /codebase/src/bot/prod.py migrate --no-input; \
-    python3 /codebase/src/bot/prod.py runbot;
+# start bot
+EXPOSE 8000
+CMD ["python3", "manage.py", "runbot"]
