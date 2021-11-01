@@ -13,6 +13,7 @@ from telegram.ext import (
     ConversationHandler,
     Filters,
 )
+from python_telegram_bot_django_persistence.persistence import DjangoPersistence
 from django.conf import settings
 
 from . import commands, callbacks, conversation, constants, messages, models
@@ -62,7 +63,7 @@ class Bot(object):
 
         token = settings.TELEGRAM_TOKEN
 
-        self.updater = Updater(token=token, use_context=True, workers=200)
+        self.updater = Updater(token=token, use_context=True, workers=200, persistence=DjangoPersistence())
         self.bot = telegram.Bot(token=token)
 
         # Notify admins

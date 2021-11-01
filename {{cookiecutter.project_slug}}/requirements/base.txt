@@ -3,3 +3,4 @@ psycopg2-binary>=2.8,<2.9
 requests~=2.25.1
 python-dotenv~=0.18.0
 python-telegram-bot~=13.7
+python-telegram-bot-django-persistence~=0.1.7
